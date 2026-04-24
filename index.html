@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CinoMix: Movie Picker</title>
+    <meta name="description" content="CinoMix helps users discover movies quickly with mood-based recommendations, genre filters, streaming provider filters, and a cinematic spin experience.">
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #090b12;
+        --panel: #111827;
+        --text: #f8fafc;
+        --muted: #cbd5e1;
+        --accent: #8b5cf6;
+        --accent-2: #22d3ee;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background:
+          radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.32), transparent 32rem),
+          radial-gradient(circle at 85% 10%, rgba(34, 211, 238, 0.22), transparent 28rem),
+          linear-gradient(180deg, #090b12 0%, #111827 100%);
+        color: var(--text);
+      }
+
+      main {
+        width: min(920px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 72px 0;
+      }
+
+      .hero {
+        display: grid;
+        gap: 28px;
+        align-items: center;
+      }
+
+      .badge {
+        display: inline-flex;
+        width: fit-content;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.07);
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(44px, 8vw, 86px);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      p {
+        margin: 0;
+        max-width: 680px;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.7;
+      }
+
+      .panel {
+        margin-top: 44px;
+        padding: 26px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 24px;
+        background: rgba(17, 24, 39, 0.78);
+        box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .item {
+        min-height: 118px;
+        padding: 18px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .item strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 16px;
+      }
+
+      .item span {
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      footer {
+        margin-top: 42px;
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 14px;
+      }
+
+      a {
+        color: var(--accent-2);
+      }
+
+      @media (max-width: 720px) {
+        main {
+          width: min(100% - 28px, 920px);
+          padding: 48px 0;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <span class="badge">CinoMix: Movie Picker</span>
+        <h1>Find your next movie faster.</h1>
+        <p>
+          CinoMix helps movie and series viewers discover what to watch with mood-based recommendations,
+          genre filters, streaming provider filters, favorites, history, and a cinematic spin flow.
+        </p>
+      </section>
+
+      <section class="panel" aria-label="App features">
+        <div class="grid">
+          <div class="item">
+            <strong>Mood-based picks</strong>
+            <span>Choose how you feel and get movie recommendations that match your mood.</span>
+          </div>
+          <div class="item">
+            <strong>Fast discovery</strong>
+            <span>Use the spin experience to reduce searching and make choosing more enjoyable.</span>
+          </div>
+          <div class="item">
+            <strong>Premium option</strong>
+            <span>Unlock ad-free use, unlimited spins, and premium themes through Google Play.</span>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        CinoMix is published by AZ Design. Support is available through the Google Play listing.
+      </footer>
+    </main>
+  </body>
+</html>
